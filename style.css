@@ -1,0 +1,159 @@
+body {
+	background-color: DarkRed;	/*фон усієї сторінки*/
+	font-family: Calibri;
+}
+
+nav ul {
+	list-style: none;		/*прибрати маркери*/
+	margin: 0px;			/*прибирання відступу*/
+	padding-left: 0px;
+	text-align: center;		/*вирівнювання тексту*/
+	font-size: 24px;
+	margin-bottom: 10px;	/*відступ знизу*/
+}
+
+nav li {
+	display: inline;		/*елементи списку в рядок*/
+	padding: 10px;			/*відступи між елементами списку*/
+}
+
+nav a {
+	text-decoration: none;	/*прибираємо підкреслювання в посиланнях меню*/
+	color: white;			/*колір посилання*/
+}
+
+nav img {
+	display: none;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+header {
+	color: white;
+	font-family: Times New Roman;
+	font-weight: bold;
+	font-size: 80px;
+	background: url(images/header.jpg);
+	background-position: center;
+	padding: 40px 0;/*Щоб текст завжди був по центру - задаємо верхній і нижній відступи блоку*/
+	text-align: center;
+}
+
+p {
+	padding-left: 8px;
+	text-align: justify;
+}
+
+footer {
+	background: DarkRed;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px 0;
+}
+
+.here {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.container {
+	background: white;
+	width: 90%;
+	margin: auto;			/*вирівнювання блоку по горизонталі*/
+	display: block;
+}
+
+.content {
+	background: LightGrey;
+	font-size: 18px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0;
+} 
+
+.picture_left, .picture_right {
+	width: 25%;
+	margin: 0;
+}
+
+.picture_left img {
+	width: 100%;
+	padding-left: 0;
+}
+
+.picture_right img {
+	width: 100%;
+	padding-right: 0;
+}
+
+.text_left,
+.text_right {
+	width: 70%;
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: justify;
+	margin: auto;
+}
+
+.link {
+	padding: 8px 20px 8px 0;
+	background: LightGray;
+	text-align: right;
+	margin-top: -4px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+	nav {
+		position: absolute;
+		top: 0px;
+		left: 5px;
+	}
+	nav ul {
+		display: none;
+		background-color: gray;
+		text-align: left;
+	}
+	nav li {
+		display: block;
+	}
+	nav img {
+		display: block;
+	}
+	nav:hover ul {
+		display: block;
+	}
+	header {
+		font-size: 2em;
+		font-family: Tahoma;
+		padding-left: 60px;
+		padding-right: 10px;
+	}
+	.content {
+		/*display: block;*/
+		flex-wrap: wrap;
+	}
+	.picture_left,
+	.picture_right {
+		width: 100%;
+		text-align: center;
+		padding-top: 10px;
+	}
+	.picture_left img,
+	.picture_right img {
+		width: 60%;
+	}
+	.text_left,
+	.text_right {
+		width: 85%;
+		text-align: center;
+	}
+	.picture_right {
+		order: 0;
+	}
+	.text_left {
+		order: 1;
+	}
+}
